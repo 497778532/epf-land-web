@@ -1,0 +1,8 @@
+// --Colors 相当于全局定义的一个css变量
+// var(--Colors) 用于引用
+// 在页面样式的引用中，你将会看到
+:root {
+  --Colors: #2d488d;
+  --lightColor: #2b70c2;
+  --priceColor: #ca0202;
+}

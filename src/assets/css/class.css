@@ -1,0 +1,305 @@
+
+/* body{
+  --Colors:#2d488d;
+  --lightColor:#2b70c2;
+  --priceColor:#ca0202;
+} */
+/*
+*  全局公共样式类
+*/
+
+/* 宽度高度100%类 */
+.epf_width_100{
+  width:100%;
+}
+.epf_height_100{
+  height:100%;
+}
+
+/* 去除margin类 */
+.epf_not_margin{
+  margin: 0 !important
+}
+
+/* 文字超出省略号类 */
+.epf_ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+/* 筛选按钮类
+*  注：需要 epf_btn 与 epf_btn_bg结合使用
+*/
+.epf_btn{
+  display: inline-block;
+  box-sizing: border-box;
+  min-width:60px;
+  height:36px;
+  padding: 0 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 36px;
+  display: inline-block;
+  cursor: pointer;
+  margin-left:10px;
+  position: relative;
+  overflow: hidden;
+}
+.epf_btn::after{
+  content: '';
+  width: 35px;
+  height: 66px;
+  background-image: linear-gradient(to left, rgba(255,255,255,.7) , rgba(255,255,255,.4));
+  position: absolute;
+  top: -20px;
+  left: -44px;
+  transform: rotateZ(30deg);
+  transition: left .3s;
+}
+.epf_btn:hover:after{
+  left: 130px;
+}
+.epf_btn:active{transform: translateY(1px)}
+.epf_btn_bg{
+  /* background:#ffa000; */
+  background:var(--lightColor);
+  color: #fff;
+  /* border:1px solid #f39b02; */
+  border:1px solid var(--lightColor);
+}
+.epf_btn_def{
+  background: #fff;
+  color: #666;
+  border:1px solid #dfdfdf;
+}
+/* 筛选按钮类 END */
+
+/* 按钮点击类 */
+.epf_btn_atv:active{transform: translateY(1px)}
+/* 盒子悬浮类 */
+.epf_btn_hov{transition: transform .4s}
+.epf_box_hov:hover{transform: translate3d(0, -5px, 0)}
+
+/* 行内元素类 */
+.epf_inline{display: inline-block}
+
+
+/* 浮动类 */
+.epf_fl {float: left !important}
+.epf_fr {float: right !important}
+
+
+/* 左中右排序类 */
+.epf_row_r{text-align: right !important}
+.epf_row_l{text-align: left !important}
+.epf_row_c{text-align: center !important}
+
+/* 禁止文字选择类 */
+.epf_not_sele{
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+}
+
+/* 用户中心虚拟table头类 */
+.epf_table_heade {
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #f1f6f7;
+  color: #333330;
+}
+/* 用户中心虚拟table头类 */
+
+/* 用户中心筛选盒子高度动画类 */
+.epf_height_box {
+  border: 1px solid #e2e2e2;
+  padding: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.epf_height_act{
+  overflow:hidden;
+  transition:height .16s;
+}
+.epf_height_act .el-row {
+  margin-bottom: 16px;
+}
+/* 用户中心筛选盒子高度动画类 */
+
+
+/* 表单字段名类 */
+.epf_form_title {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 34px;
+  padding: 0 10px;
+  text-align: right;
+  line-height: 34px;
+}
+
+/* 个人中心tbale字段盒子类 */
+.epf_fie_box{
+  height:125px;
+  text-align:center;
+  position:relative;
+}
+
+/* 个人中心tbale金额字段类 */
+.epf_money{
+  line-height:125px;
+  font-size:16px;
+  color:var(--priceColor);
+  font-weight:bold;
+}
+
+/* 个人中心tbale字段行高类 */
+.epf_fie_lihe{
+  line-height:125px;
+  color:#9a9a9a;
+}
+
+/* 个人中心tbale按钮盒子类 */
+.epf_btn_flex{
+  height:125px;
+  text-align: center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* 个人中心nodata图片类 */
+.epf_def_img{
+  margin-top:10px;
+  margin-bottom:10px;
+  height:190px;
+}
+
+/* 个人中心分页器位置类 */
+.epf_page_sile{
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* 状态提示标识类 */
+.default,
+.error,
+.success {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  position: relative;
+  top: 1px;
+  right: 5px;
+}
+.default {
+  background: #b6b6b6;
+  border: 2px solid #cfcfcf;
+}
+.error {
+  background: #fd4041;
+  border: 2px solid #ff6c6f;
+}
+.success {
+  background: #92b62d;
+  border: 2px solid #bfd482;
+}
+/* 状态提示标识类 */
+
+/* land List image */
+.epf_land_img {
+  display: block;
+  height: 82px;
+  width: 122px;
+  float: left;
+}
+/* img */
+
+/* 弹窗内容溢出类 */
+.epf_over_flow{
+  overflow: auto;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+}
+
+/* 弹窗按钮组固定类 */
+.epf_popup_fixed{
+  width: 100%;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+}
+
+
+/* 未更改 */
+.flexibleSwitch {
+  display: block;
+  float: right;
+  color: #4472d5;
+  cursor: pointer;
+}
+.flexibleSwitchCenter {
+  display: block;
+  color:var(--lightColor);
+  cursor: pointer;
+}
+.borderImg {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.monad {
+  display: block;
+  width: 48px;
+  height: 34px;
+  line-height: 36px;
+}
+.orderType {
+  width: 46px;
+  margin-top: 5px;
+  font-size: 12px;
+  padding: 3px 5px;
+  border: 1px solid var(--Colors);
+  color: var(--Colors);
+  text-align: center;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+/* 未更改 */
+.epf_loginbut{
+  width:413px ;
+  height:44px;
+  line-height: 44px;
+  font-size: 18px;
+}
+.epf_proess{
+  width:100%;
+  height:127px;
+  box-sizing: border-box;
+  padding-left: 80px;
+  clear: both;
+  background: url("../image/icon_bu_bg.png") no-repeat center
+    center;
+}
+.epf_proess_title{
+  font-size: 20px;
+  line-height: 127px;
+  color: #666666;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 100px;
+  font-weight: bold;
+}
+.epf_proess_cont{
+  width:75%;
+  display: inline-block;
+  vertical-align: top;
+}

@@ -1,0 +1,99 @@
+
+/* --Colors:#ffa000; */
+/* var(--Colors) */
+/* #ff6825 */
+/* var(--priceColor) */
+/* var(--lightColor) */
+
+/* body{
+  --Colors:#2d488d;
+  --lightColor:#2b70c2;
+  --priceColor:#ca0202;
+} */
+body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,form,input,textarea,th,td,select { margin:0; padding:0;}
+h1,h2,h3,h4,h5,h6 { font-weight: normal; font-size: 14px;}
+small { font-size: 14px;}
+em,i { font-style: normal;}
+ul,ol,dl { list-style: none;}
+ul,li {LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none}
+a { text-decoration: none; border:none;}
+img { border: none; vertical-align: top;}
+table { border-collapse: collapse;}
+input,textarea { font-size: 12px; outline: none;}
+textarea { resize: none; overflow: auto;}
+body { font-size: 14px; font-family:"微软雅黑"; background-color: #ffffff;min-width:1250px;}
+/*------------------------------------*\
+               	公共模块
+\*------------------------------------*/
+.clearfix:after { content: ""; display: block; clear: both;}
+.relative {position:relative;}
+.fl { float: left;}
+.fr { float: right;}
+.clear{width:auto; height:1px; clear:both}
+.win1200{width:1200px; height:auto; overflow:hidden; clear:both; margin:0 auto}
+
+body,html{
+	/* 声明项目公用基本样式字体大小 颜色等 */
+    font-family:Helvetica, Arial,"Microsoft YaHei", sans-serif;
+}
+.el-checkbox__label{
+  color:#999999;
+}
+.el-checkbox__inner:hover{
+  color:#999999!important;
+}
+
+/* input框不能选中状态字体颜色 */
+.el-input.is-disabled .el-input__inner{
+  color:var(--Colors);
+}
+.el-radio__input.is-checked .el-radio__inner{
+  background:var(--lightColor);
+  border-color: var(--lightColor);
+}
+.el-radio__input.is-checked+.el-radio__label{
+  color:#666;
+}
+.el-form-item__label{width: 204px;}
+.el-textarea__inner{height:108px;}
+.el-button--primary {
+  color: #FFF;
+  background-color: var(--Colors);
+  border-color: var(--Colors);
+}
+.el-textarea__inner{
+  height:90% !important;
+}
+/* 表单控件border outline */
+input,button{
+	border:none;
+	outline:none;
+}
+
+/* 省略号 */
+.lines{
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient:vertical;
+	text-overflow:ellipsis;
+	-webkit-line-clamp:n;
+}
+/* 公共样式 */
+/* a{d} */
+.fl {float: left;}
+.fr {float: right;}
+.clearfix {zoom: 1;}
+.clearfix:after {content: "";display: table;clear: both;}
+* {padding: 0px;margin: 0px;list-style: none;}
+a{text-decoration:none;color:black;}
+.over{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+}
+/* @import '../assets/font/DS-DIGI.TTF'; */
+/* 引入字体 */
+@font-face {
+  font-family: digi;
+  src: url("../font/DS-DIGI.TTF");
+}
